@@ -1,3 +1,5 @@
+// Point of View
+
 function prompt(str) {
   const lastIndex = str.length - 1;
   if (str.charCodeAt(lastIndex) === 63) {

@@ -1,3 +1,5 @@
+// DECIMALS
+
 const num1 = 0.2;
 const num2 = 0.1;
 const sumNum1And2 = num1 + num2;

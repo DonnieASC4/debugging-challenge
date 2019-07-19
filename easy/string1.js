@@ -1,3 +1,5 @@
+// string1
+
 function printOutHello(num){
   const message = "Hello
   World";

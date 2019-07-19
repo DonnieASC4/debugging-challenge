@@ -1,3 +1,5 @@
+// SPOT THE ISSUE
+
 function canYouSpotTheProblem() {
   "use strict";
   for (counter = 0; counter < 10; counter++) {
@@ -6,3 +8,5 @@ function canYouSpotTheProblem() {
 }
 
 canYouSpotTheProblem();
+
+// Debug!
