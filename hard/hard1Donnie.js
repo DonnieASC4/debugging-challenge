@@ -5,7 +5,7 @@ const circleRadius = 10;
 function setup() {
     createCanvas(canvasSize, canvasSize);
     background(255);
-    setGraphCoordinates(canvasSize);
+    coordinatesArray = setGraphCoordinates(canvasSize);
 }
 
 /*
@@ -20,10 +20,13 @@ returns: coordinatesArray, a 2D array containing (x, y coordinates)
 */
 function setGraphCoordinates(canvasSize) {
     let xCoordinate = 0;
+    let yCoordinate = 1000;
     const decimalIncrement = 0.1;
     let coordinatesArray = []
-    while(yCoordinate < canvasSize) {
+    while(yCoordinate > 0) {
+
         let orderedPair = generateOrderedPair(xCoordinate);
+        yCoordinate =orderedPair[1] 
         coordinatesArray.push(orderedPair);
         xCoordinate +=decimalIncrement;
     }
@@ -69,7 +72,13 @@ function TransformCoordinates(orderedPair) {
 
 This function is not debugged. 
 
-What do you do?
+We are making a graphing calculator function!
+
+We want to create a parabola y = x^2/30 in the first quadrant.
+Where each ellipse is a point for the parabola.
+
+All of the math has been taken care of and the points have been determined.
+So why don't any of the points show up on the screen? 
 
 */
 
@@ -77,7 +86,7 @@ function draw() {
     ellipseMode(RADIUS)
     fill(255, 0, 0);
     if (currentIndex < coordinatesArray.length) {
-        let orderedPair = coordinatesArray.slice(currentIndex, currentIndex+1)
+        let orderedPair = coordinatesArray.slice(currentIndex, currentIndex +1)
         let xCoordinate = orderedPair[0];
         let yCoordinate = orderedPair[1];
         ellipse(xCoordinate, yCoordinate, circleRadius, circleRadius);
